@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0; 
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 22pt;
+  color: #FFF;
+  margin: 0;
+  text-align: center; }
+
+header {
+  background-color: orange;
+  padding: 20px;
+  margin-bottom: 50px; }
+
+section {
+  margin-bottom: 10px;
+  padding: 20px; }
+
+.greenSection {
+  background-color: green; }
+
+.blueSection {
+  background-color: cadetblue; }
+
+footer {
+  background-color: darkred;
+  padding: 20px;
+  margin-top: 50px; }
+
+/*# sourceMappingURL=styles.css.map */
+
+@supports (grid-area:auto) {
+    
+    @media screen and (min-width: 600px) {
+        
+        body{
+            background-color: red;
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(6, 16.6%);
+            grid-template-areas: 
+                                "header header"
+                                "GSec1 GSec2"
+                                "BSec1 BSec1"
+                                "BSec2 BSec2"
+                                "BSec3 BSec3"
+                                "footer footer";
+        }
+        header {
+            grid-area: header;
+        }
+        
+        .GSec1 {
+            grid-area: GSec1;
+        }
+   
+        .GSec2 {
+            grid-area: GSec2;
+    
+        }
+    
+        .BSec1 {
+             grid-area: BSec1;
+        }
+    
+        .BSec2 {
+            grid-area: BSec2;
+        }
+        
+        .BSec3 {
+            grid-area: BSec3;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        
+    }
+    
+    @media screen and (min-width:1000px) {
+        
+        body {
+            background-color: gray;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                               "header header header"
+                               "GSec1 GSec1 GSec2"
+                               "BSec1 BSec2 BSec3"
+                               "footer footer footer";
+            
+        } 
+    
+}
